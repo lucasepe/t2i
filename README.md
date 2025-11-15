@@ -79,9 +79,9 @@ Thank you for your generosity and for being part of this journey!
 
 ## How To Install
 
-### Using the _install.sh_ script (macOS, linux)
+### Using the _install.sh_ script (macOS & linux)
 
-Easily run the following command in your terminal:
+Simply run the following command in your terminal:
 
 ```sh
 curl -sL https://raw.githubusercontent.com/lucasepe/t2i/main/install.sh | bash
@@ -96,16 +96,18 @@ This script will:
 - Make sure the install directory is in your _PATH_ environment variable
 
 
-### Manually, downloading the latest binaries from the [releases page](https://github.com/lucasepe/t2i/releases/latest):
+### Manually download the latest binaries from the [releases page](https://github.com/lucasepe/t2i/releases/latest):
 
 - [macOS](https://github.com/lucasepe/t2i/releases/latest)
 - [Windows](https://github.com/lucasepe/t2i/releases/latest)
 - [Linux (arm64)](https://github.com/lucasepe/t2i/releases/latest)
 - [Linux (amd64)](https://github.com/lucasepe/t2i/releases/latest)
 
+Unpack the `t2i` binary into any directory that is part of your _PATH_.
+
 ## If you have [Go](https://go.dev/dl/) installed
 
-You can also install it with:
+You can also install `t2i` using:
 
 ```bash
 go install github.com/lucasepe/t2i@latest

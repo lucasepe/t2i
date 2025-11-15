@@ -88,8 +88,11 @@ jobs:
           build_target linux amd64 "" "amd64"
           build_target linux arm64 "" "arm64"
 
-          # macOS: arm64 (no suffix)
-          build_target darwin arm64 "" ""
+          # macOS: amd64
+          build_target darwin amd64 "" "amd64"
+
+          # macOS: arm64
+          build_target darwin arm64 "" "arm64"
 
           # Windows: amd64
           build_target windows amd64 ".exe" ""
