@@ -16,26 +16,6 @@
 - Optionally force square images
 - Handles tabs with configurable tab width
 
-
-## Installation
-
-Clone the repository and build the binary:
-
-```bash
-git clone https://github.com/lucasepe/t2i.git
-cd t2i
-go build -o t2i main.go
-````
-
-You can also install it with:
-
-```bash
-go install github.com/lucasepe/t2i@latest
-```
-
-Make sure your `$GOPATH/bin` is in your PATH to run `t2i` from anywhere.
-
-
 ## Usage
 
 ```
@@ -99,18 +79,36 @@ Thank you for your generosity and for being part of this journey!
 
 ## How To Install
 
-### Download the latest binaries from the [releases page](https://github.com/lucasepe/t2i/releases/latest):
+### Using the _install.sh_ script (macOS, linux)
+
+Easily run the following command in your terminal:
+
+```sh
+curl -sL https://raw.githubusercontent.com/lucasepe/t2i/main/install.sh | bash
+```
+
+This script will:
+
+- Detect your operating system and architecture
+- Download the latest release binary
+- Install it into _/usr/local/bin_ (requires sudo)
+  - otherwise fallback to _$HOME/.local/bin_ 
+- Make sure the install directory is in your _PATH_ environment variable
+
+
+### Manually, downloading the latest binaries from the [releases page](https://github.com/lucasepe/t2i/releases/latest):
 
 - [macOS](https://github.com/lucasepe/t2i/releases/latest)
 - [Windows](https://github.com/lucasepe/t2i/releases/latest)
 - [Linux (arm64)](https://github.com/lucasepe/t2i/releases/latest)
 - [Linux (amd64)](https://github.com/lucasepe/t2i/releases/latest)
 
-### Using a Package Manager
+## If you have [Go](https://go.dev/dl/) installed
 
-» macOS » [Homebrew](https://brew.sh/)
+You can also install it with:
 
-```sh
-brew tap lucasepe/cli-tools
-brew install t2i
+```bash
+go install github.com/lucasepe/t2i@latest
 ```
+
+Make sure your `$GOPATH/bin` is in your PATH to run `t2i` from anywhere.
