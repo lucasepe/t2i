@@ -1,0 +1,116 @@
+
+# t2i - Convert text to image
+
+**`t2i` is a simple and fast CLI tool that converts text into PNG images.**
+
+> You can read input from stdin, from a file, or type text manually.
+>
+> It supports customizable font size, colors, margins, DPI, and automatic sizing.
+
+## Features
+
+- Convert text into a PNG image
+- Read text from stdin, a file, or terminal input
+- Automatic or manual image sizing
+- Customizable font size, DPI, text color, background color, and margins
+- Optionally force square images
+- Handles tabs with configurable tab width
+
+
+## Installation
+
+Clone the repository and build the binary:
+
+```bash
+git clone https://github.com/lucasepe/t2i.git
+cd t2i
+go build -o t2i main.go
+````
+
+You can also install it with:
+
+```bash
+go install github.com/lucasepe/t2i@latest
+```
+
+Make sure your `$GOPATH/bin` is in your PATH to run `t2i` from anywhere.
+
+
+## Usage
+
+```
+t2i [flags] [file]
+```
+
+### Input
+
+* **Pipe from stdin**:
+
+```bash
+echo "Hello World" | t2i -o out.png
+```
+
+* **Read from a file**:
+
+```bash
+t2i -o out.png myfile.txt
+```
+
+* **Manual input** (if no file is provided and stdin is not piped):
+
+```
+t2i -o out.png
+Type your text and finish with CTRL+D
+```
+
+---
+
+### Flags
+
+| Flag | Description                                  | Default |
+| ---- | -------------------------------------------- | ------- |
+| `-H` | Height of the image in pixels                | 0       |
+| `-W` | Width of the image in pixels                 | 0       |
+| `-a` | Automatically size the image to fit the text | true    |
+| `-b` | Background color in HEX format               | #fff    |
+| `-c` | Text color in HEX format                     | #000    |
+| `-d` | Font DPI                                     | 120     |
+| `-f` | Font size in points                          | 14      |
+| `-h` | Show help                                    | false   |
+| `-m` | Margin around the text (pixels)              | 24      |
+| `-o` | Output PNG file path                         | out.png |
+| `-s` | Force the image to be square                 | false   |
+| `-t` | Number of spaces to replace each tab         | 4       |
+
+
+## Support
+
+All tools are completely free to use, with every feature fully unlocked and accessible.
+
+If you find one or more of these tool helpful, please consider supporting its development with a donation.
+
+Your contribution, no matter the amount, helps cover the time and effort dedicated to creating and maintaining these tools, ensuring they remain free and receive continuous improvements.
+
+Every bit of support makes a meaningful difference and allows me to focus on building more tools that solve real-world challenges.
+
+Thank you for your generosity and for being part of this journey!
+
+[![Donate with PayPal](https://img.shields.io/badge/💸-Tip%20me%20on%20PayPal-0070ba?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FV575PVWGXZBY&source=url)
+
+## How To Install
+
+### Download the latest binaries from the [releases page](https://github.com/lucasepe/t2i/releases/latest):
+
+- [macOS](https://github.com/lucasepe/t2i/releases/latest)
+- [Windows](https://github.com/lucasepe/t2i/releases/latest)
+- [Linux (arm64)](https://github.com/lucasepe/t2i/releases/latest)
+- [Linux (amd64)](https://github.com/lucasepe/t2i/releases/latest)
+
+### Using a Package Manager
+
+» macOS » [Homebrew](https://brew.sh/)
+
+```sh
+brew tap lucasepe/cli-tools
+brew install t2i
+```

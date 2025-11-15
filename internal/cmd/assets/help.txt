@@ -1,0 +1,20 @@
+▐   ▞▀▖ ▗  
+▜▀   ▗▘ ▄  by LS71
+▐ ▖ ▗▘  ▐  https://github.com/lucasepe
+ ▀  ▀▀▘ ▀▘
+Convert text to image.
+
+USAGE:
+
+  t2i [flags] [file]
+
+EXAMPLES:
+
+  Pipe text from stdin:
+    echo "Hello World" | t2i -o out.png
+
+  Read text from a file:
+    t2i -o out.png myfile.txt
+
+  If no file is provided and stdin is not piped, you
+  can type text manually and finish with CTRL+D.

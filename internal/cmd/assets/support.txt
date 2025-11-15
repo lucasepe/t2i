@@ -1,0 +1,8 @@
+SUPPORT:
+
+  If you find this tool helpful consider supporting with a donation.
+  Every bit helps cover development time and fuels future improvements.
+
+  Your support truly makes a difference — thank you!
+
+    * https://www.paypal.com/donate/?hosted_button_id=FV575PVWGXZBY
