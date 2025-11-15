@@ -16,11 +16,24 @@ elif [[ $# -eq 1 ]]; then
   VERSION="$1"
   LATEST_TAG="v$VERSION"
 else
-  LATEST_TAG=$(curl -s "https://api.github.com/repos/${REPO}/releases/latest" \
-    | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
-  if [[ -z "$LATEST_TAG" ]]; then
-    echo "❌ Failed to fetch the latest release tag." && exit 1
+  # Try to fetch the latest release
+  JSON=$(curl -s "https://api.github.com/repos/${REPO}/releases/latest")
+  LATEST_TAG=$(echo "$JSON" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+
+  # Fallback: if no official "latest" release exists, use the most recent tag
+  if [[ -z "$LATEST_TAG" || "$LATEST_TAG" == "null" ]]; then
+    echo "⚠️  No 'latest' release found, falling back to tags..."
+    LATEST_TAG=$(curl -s "https://api.github.com/repos/${REPO}/tags" \
+      | grep '"name":' \
+      | sed -E 's/.*"([^"]+)".*/\1/' \
+      | head -n 1)
   fi
+
+  if [[ -z "$LATEST_TAG" || "$LATEST_TAG" == "null" ]]; then
+    echo "❌ Could not determine latest version."
+    exit 1
+  fi
+
   VERSION="${LATEST_TAG#v}"
 fi
 
