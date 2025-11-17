@@ -1,0 +1,40 @@
+=== POWERLINE ORIGINAL SYMBOLS ===
+  U+E0A0  Branch
+  U+E0A1  Line Number
+  U+E0A2  Lock
+  U+E0A3  Column Number
+
+  U+E0B0  Right Solid
+  U+E0B1  Right Thin
+  U+E0B2  Left Solid
+  U+E0B3  Left Thin
+
+=== POWERLINE EXTRA (NERD FONTS TRIANGLES) ===
+  U+E0C0  Lower Left Triangle
+  U+E0C1  Lower Right Triangle
+  U+E0C2  Upper Left Triangle
+  U+E0C3  Upper Right Triangle
+
+=== NERD FONTS POWERLINE-STYLE GIT ICONS ===
+  U+E725  Git
+  U+E727  Git Branch
+  U+E728  Git Merge
+  U+E729  Git Compare
+
+=== NERD FONTS DISTRO ICONS (COMMON IN PROMPTS) ===
+  U+E706  Arch Linux
+  U+E712  Ubuntu
+  U+F303  Arch (alt)
+  U+F304  CentOS
+  U+F306  Debian
+
+=== NERD FONTS COMMON UI ICONS ===
+  U+F120  Terminal
+  U+F1BE  Database
+  U+F1E2  Bomb
+  U+F6D5  Docker
+
+=== MIXED DEMO (SEPARATORS + ICONS) ===
+██░░▒▒█        
+
+=== END ===

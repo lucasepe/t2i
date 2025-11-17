@@ -30,14 +30,14 @@ func main() {
 	cmdutil.CheckErr("error reading input", err)
 	input = textutil.Clean(input, opts.TabSize)
 
-	img, err := text.Render(input, opts.RenderOptions)
+	img, err := text.RenderGG(string(input), opts.RenderOptions)
 	cmdutil.CheckErr("rendering text to image failed", err)
 
 	f, err := os.Create(opts.Outfile)
 	cmdutil.CheckErr("cannot write output", err)
 	defer f.Close()
 
-	err = imageio.WriteToFile(img, opts.Outfile, imageio.PNG)
+	err = imageio.WriteToFile(img.Image(), opts.Outfile, imageio.PNG)
 	cmdutil.CheckErr("failed to write image", err)
 
 	fmt.Println("Image written to", opts.Outfile)

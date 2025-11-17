@@ -39,6 +39,7 @@ func Configure(fs *flag.FlagSet, vals *FlagValues, args []string) Options {
 			Square:          *vals.Square,
 			TextColor:       textCol,
 			BackgroundColor: bgCol,
+			LineSpacing:     *vals.LineSpacing,
 		},
 		TabSize: *vals.TabSize,
 		Outfile: *vals.Outfile,
