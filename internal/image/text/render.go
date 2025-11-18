@@ -57,7 +57,7 @@ type RenderOptions struct {
 }
 
 func RenderGG(text string, opts RenderOptions) (*gg.Context, error) {
-	fnt, err := bdf.LoadFont(fonts.Cozette())
+	fnt, err := bdf.LoadFont(fonts.Cozette2X())
 	if err != nil {
 		return nil, fmt.Errorf("unable to load fonts: %s", err)
 	}
