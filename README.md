@@ -12,7 +12,7 @@
 - Convert text into a PNG image
 - Read text from stdin, a file, or terminal input
 - Automatic or manual image sizing
-- Customizable font size, DPI, text color, background color, and margins
+- Customizable text color, background color, and margins
 - Optionally force square images
 - Handles tabs with configurable tab width
 
