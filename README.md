@@ -43,26 +43,6 @@ t2i -o out.png
 Type your text and finish with CTRL+D
 ```
 
----
-
-### Flags
-
-| Flag | Description                                  | Default |
-| ---- | -------------------------------------------- | ------- |
-| `-H` | Height of the image in pixels                | 0       |
-| `-W` | Width of the image in pixels                 | 0       |
-| `-a` | Automatically size the image to fit the text | true    |
-| `-b` | Background color in HEX format               | #fff    |
-| `-c` | Text color in HEX format                     | #000    |
-| `-d` | Font DPI                                     | 120     |
-| `-f` | Font size in points                          | 14      |
-| `-h` | Show help                                    | false   |
-| `-m` | Margin around the text (pixels)              | 24      |
-| `-o` | Output PNG file path                         | out.png |
-| `-s` | Force the image to be square                 | false   |
-| `-t` | Number of spaces to replace each tab         | 4       |
-
-
 ## Support
 
 All tools are completely free to use, with every feature fully unlocked and accessible.
