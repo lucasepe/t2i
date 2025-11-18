@@ -30,12 +30,8 @@ func Configure(fs *flag.FlagSet, vals *FlagValues, args []string) Options {
 	// Build the final render options
 	return Options{
 		RenderOptions: text.RenderOptions{
-			ImageWidth:      *vals.Width,
-			ImageHeight:     *vals.Height,
 			Margin:          *vals.Margin,
-			FontSize:        *vals.FontSize,
-			DPI:             *vals.DPI,
-			AutoSize:        *vals.AutoSize,
+			AutoSize:        true,
 			Square:          *vals.Square,
 			TextColor:       textCol,
 			BackgroundColor: bgCol,

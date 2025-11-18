@@ -5,6 +5,8 @@ import (
 	"image/color"
 	"strings"
 
+	"github.com/lucasepe/t2i/internal/bdf"
+	"github.com/lucasepe/t2i/internal/bdf/fonts"
 	"github.com/lucasepe/t2i/internal/gg"
 )
 
@@ -55,10 +57,12 @@ type RenderOptions struct {
 }
 
 func RenderGG(text string, opts RenderOptions) (*gg.Context, error) {
-	face, err := gg.LoadFontFaceFromBytes(goMono, opts.DPI, opts.FontSize)
+	fnt, err := bdf.LoadFont(fonts.Cozette())
 	if err != nil {
 		return nil, fmt.Errorf("unable to load fonts: %s", err)
 	}
+
+	face := fnt.NewFace()
 
 	// Crea un contesto provvisorio per misurare il testo
 	dc := gg.NewContext(100, 100)
